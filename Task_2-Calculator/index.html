@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="./styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel='icon' type='image/x-icon' href='./images/favicon.png' />
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <div class="toggle-container">
+                <label class="toggle-switch">
+                    <input type="checkbox" id="toggle-mode" />
+                    <span class="toggle-slider"></span>
+                    </label>
+                    <div class="label">Mode</div>
+            </div>
+            <a class="title" onclick="location.reload();">CALCULATOR</a>
+            <div class="history-container">
+                <img id="historybutton" src="./images/history.png" onclick="viewHistory()">
+                <div class="label">History</div> 
+            </div>       
+        </h1>
+        <div class="calculator">
+            <input type="text" name="screen" id="display" readonly>
+            <table>
+                <tr>
+                    <td><button onclick="appendToDisplay('7')">7</button></td>
+                    <td><button onclick="appendToDisplay('8')">8</button></td>
+                    <td><button onclick="appendToDisplay('9')">9</button></td>
+                    <td><button class="highlight" onclick="clearDisplay()" style="background-color: red;">C</button></td>
+                    <td><button class="highlight" onclick="clearEntry()" style="background-color: red;">CE</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="appendToDisplay('4')">4</button></td>
+                    <td><button onclick="appendToDisplay('5')">5</button></td>
+                    <td><button onclick="appendToDisplay('6')">6</button></td>
+                    <td><button onclick="appendToDisplay('*')" style="background-color: rgb(23, 228, 194);">X</button></td>
+                    <td><button onclick="appendToDisplay('/')" style="background-color: rgb(23, 228, 194);">/</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="appendToDisplay('1')">1</button></td>
+                    <td><button onclick="appendToDisplay('2')">2</button></td>
+                    <td><button onclick="appendToDisplay('3')">3</button></td>
+                    <td><button onclick="appendToDisplay('+')" style="background-color: rgb(23, 228, 194);">+</button></td>
+                    <td><button onclick="appendToDisplay('-')" style="background-color: rgb(23, 228, 194);">-</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="appendToDisplay('00')">00</button></td>
+                    <td><button onclick="appendToDisplay('0')">0</button></td>
+                    <td><button onclick="appendToDisplay('.')">.</button></td>
+                    <td><button onclick="appendToDisplay('%')" style="background-color: rgb(23, 228, 194);">%</button></td>
+                    <td><button class="highlight" onclick="calculateResult()" style="background-color: rgb(23, 228, 23);">=</button></td>
+                </tr>
+            </table>
+            <hr style="max-width: 50vw;">
+            <div style="font-size:1rem; display: flex; align-items: center; justify-content: center;">
+                <a style="text-decoration: none; color: #f1c40f; margin-left: 0.25rem;">&copy; 2025 AMJ<br>All rights reserved.</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./scripts/calc.js"></script>
+
+</html>
