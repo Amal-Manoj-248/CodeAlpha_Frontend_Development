@@ -1,0 +1,206 @@
+body {
+  background-color: lightgreen;
+  transition: background-color .5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+
+}
+
+.playlist {
+  width: 30%;
+  max-width: 300px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: left;
+  overflow-y: auto;
+  height: 80vh;
+  border-color: gold;
+  border-width: 5px;
+  border-style: groove;
+}
+
+.playlist-item {
+  padding: 10px;
+  background: wheat;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.playlist-item:hover {
+  background: #ddd;
+}
+
+.player {
+  width: 65%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-color: gold;
+  border-width: 5px;
+  border-style: groove;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.track-art {
+  margin: 25px;
+  height: 250px;
+  width: 250px;
+  background-size: cover;
+  border-radius: 50%;
+  transition: transform 1s linear;
+  transform-origin: center;
+}
+
+.now-playing {
+  font-size: 1.5rem;
+  color: maroon;
+}
+
+.track-name {
+  font-size: 3rem;
+  color: mediumblue;
+}
+
+.track-artist {
+  font-size: 2rem;
+  color: magenta;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Center controls horizontally */
+}
+
+.playpause-track, .prev-track, .next-track, .shuffle-track, .mute-track {
+  padding: 20px;
+  opacity: 0.8;
+  transition: opacity .2s;
+  cursor: pointer;
+  color:black;
+  margin: 0 10px; /* Space out the buttons */
+}
+
+.playpause-track:hover, .prev-track:hover, .next-track:hover, .shuffle-track:hover, .mute-track:hover {
+  opacity: 1.0;
+}
+
+.shuffle-track.active {
+  color: red;
+}
+
+.slider_container {
+  width: 75%;
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seek_slider, .volume_slider {
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background:darkorange;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.seek_slider::-webkit-slider-thumb, .volume_slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: aquamarine;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.seek_slider:hover, .volume_slider:hover {
+  opacity: 1.0;
+}
+
+.current-time, .total-duration {
+  padding: 10px;
+  min-width: 40px;
+  color: darkblue;
+  font-size: large;
+}
+
+/* Rotating effect for track art */
+.track-art.playing {
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Container for both player and playlist */
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* Style for the player area */
+.player {
+  flex: 1;
+  padding: 20px;
+  background-color:lemonchiffon;
+  border-radius: 8px;
+  margin-left: 20px;
+  border-radius: 20px;
+}
+
+/* Style for the playlist area */
+.playlist {
+  width: 25%;
+  padding: 20px;
+  background-color: black;
+  border-radius: 14px;
+  margin-right: 20px;
+}
+
+/* Playlist item styling */
+.playlist-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.playlist-item:hover {
+  background-color: gray;
+}
+
+footer {
+  color: dodgerblue;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+}
+
