@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Studio Gallery</title>
+    <link rel="icon" href="../img/sd.png">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            color: goldenrod;
+            text-align: center;
+        }
+
+        /* Image Grid */
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 10px;
+        }
+
+        .column {
+            flex: 1 1 18%;
+            margin: 5px;
+            max-width: 18%;
+        }
+
+        @media (max-width: 1024px) {
+            .column {
+                flex: 1 1 30%;
+                max-width: 30%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .column {
+                flex: 1 1 45%;
+                max-width: 45%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .column {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+        .column img {
+            width: 100%;
+            opacity: 0.8;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        .column img:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+
+        /* Expanded Image Container */
+        .container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .container img {
+            max-width: 90%;
+            max-height: 80vh;
+            border-radius: 10px;
+        }
+
+        #imgtext {
+            color: white;
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+</header>
+
+<div id="navbar">
+    <nav>
+        <a href="../home.html">Back to Home</a>
+    </nav>
+</div>
+<br>
+
+<h1>Movies</h1>
+
+<!-- Image Grid (25 Images) -->
+<div class="row">
+    <div class="column"><img src="../img/movie/m (1).jfif" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (2).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (3).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (4).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (5).jpg" onclick="myFunction(this);"></div>
+
+    <div class="column"><img src="../img/movie/m (6).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (7).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (8).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (9).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (10).jpg" onclick="myFunction(this);"></div>
+
+    <div class="column"><img src="../img/movie/m (11).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (12).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (13).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (14).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (15).jpg" onclick="myFunction(this);"></div>
+
+    <div class="column"><img src="../img/movie/m (16).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (17).webp" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (18).avif" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (19).jpg" onclick="myFunction(this);"></div>
+    <div class="column"><img src="../img/movie/m (20).avif" onclick="myFunction(this);"></div>
+</div>
+
+
+
+<!-- Expanded Image View -->
+<div class="container" id="expandedContainer">
+    <span class="closebtn" onclick="closeImage()">&times;</span>
+    <img id="expandedImg">
+    <div id="imgtext"></div>
+</div>
+
+<script>
+    function myFunction(imgs) {
+        var expandImg = document.getElementById("expandedImg");
+        var imgText = document.getElementById("imgtext");
+        var container = document.getElementById("expandedContainer");
+
+        expandImg.src = imgs.src;
+        imgText.innerHTML = "";
+        container.style.display = "flex";
+    }
+
+    function closeImage() {
+        document.getElementById("expandedContainer").style.display = "none";
+    }
+</script>
+
+<footer>
+    <p>&copy;2025 Studio Gallery.<br> All rights reserved.</p>
+</footer>
+
+</body>
+</html>

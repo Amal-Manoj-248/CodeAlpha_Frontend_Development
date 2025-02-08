@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Studio Gallery</title>
+    <link rel="icon" href="../img/sd.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="../css/style.css"> 
+</head>
+<body>
+
+    <header>
+    </header>
+    <div id="navbar">
+        <nav>
+            <a href="../home.html">Back to Home</a>
+        </nav>
+    </div>
+    <br><br>
+
+    <style>
+        .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-style: groove;
+    border-color: gold;
+}
+
+.about-content h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-content p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.address-map {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.address, .map-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    border-style: groove;
+    border-color: maroon;
+}
+
+.map-container iframe {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.address h3, .map-container h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+.address p {
+    font-size: 16px;
+    color: #555;
+}
+
+.follow-us {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+}
+
+.follow-us h3 {
+    font-size: 22px;
+    color: #333;
+    padding: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+.contact-us {
+    padding: 20px;
+    margin-top: 40px;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    border-style: groove;
+    border-color: yellowgreen;
+}
+
+.contact-us h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us label {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.contact-us input, .contact-us textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contact-us button {
+    padding: 12px 20px;
+    background-color: yellowgreen;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us button:hover {
+    background-color: goldenrod;
+}
+</style>
+
+<section id="about-us">
+    <div class="about-container">
+        <!-- About Us Section -->
+        <div class="about-content">
+            <h2 style="color: goldenrod;"><center>About Us</center></h2>
+            <p><center>Welcome to Studio Gallery, where creativity meets passion! 
+                Our studio gallery is a space dedicated to showcasing stunning visual artistry, 
+                from breathtaking photography to captivating digital and traditional artworks.</center></p>
+        </div>
+
+
+        <div class="about-content">
+            <h2 style="color: burlywood;"><center>Our Vision and Mission</center></h2>
+            <p><center>At Studio Gallery, we believe in the power of visual storytelling. 
+                Our mission is to create and exhibit compelling works that inspire, evoke emotions, 
+                and leave a lasting impact on our audience.</center></p>
+        </div>
+        
+        <!-- Address and Map Section -->
+        <div class="address-map">
+            <div class="address">
+                <h3 style="color: maroon;">Our Address</h3>
+                <p>Studio Gallery</p>
+                <p>2nd Street, Bypass road, Sulthan Bathery</p>
+                <p>Wayanad, Kerala, India</p>
+                <p>Pincode - 673592</p>
+                <p>Phone: +91 860 068 8008</p>
+                <p>Email: studiogallery@gmail.com</p>
+                <p><img src="../img/sd.png" width="100%" height="250"></p>
+            </div>
+            
+            <div class="map-container">
+                <h3 style="color: maroon;">Our Location</h3>
+                <!-- Embed Google Map -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15629.803762114027!2d76.2558633!3d11.6624202!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba608bb99d477b3%3A0x402816c8fca1f0f1!2sAiswarya%20Athulya%20Movie%20Theatre!5e0!3m2!1sen!2sin!4v1729239441928!5m2!1sen!2sin" width="100%" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        
+        <!-- Contact Us Form Section -->
+        <div class="contact-us">
+            <h3 style="color: yellowgreen;"><center>Contact Us</center></h3>
+            <form action="/send-message" method="POST">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Follow Us Section -->
+        <div class="follow-us">
+            <h3 style="color: mediumvioletred;">Follow Us</h3>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/yourpage" target="_blank">
+                    <img src="../img/fb.png" alt="Facebook">
+                </a>
+                <a href="https://www.twitter.com/yourpage" target="_blank">
+                    <img src="../img/twi.png" alt="Twitter">
+                </a>
+                <a href="https://www.instagram.com/yourpage" target="_blank">
+                    <img src="../img/insta.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy;2025 Studio Gallery.<br> All rights reserved.</p>
+</footer>
+
+</body>
+</html>
